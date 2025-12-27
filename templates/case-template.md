@@ -31,11 +31,14 @@ ddrescue -f -r1 /dev/sdX image.img map.log
 
 # Result
 Percent recovered:
+
 Hierarchy preserved: yes/no/partial
+
 Carving required: yes/no
 
 # Time Required
 Imaging:
+
 Analysis:
 
 # Notes

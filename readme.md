@@ -13,12 +13,19 @@ All work follows a read-only, imaging-first workflow. No client data is ever upl
 
 ## What This Repo Never Contains
 ✘ Actual recovered files  
-✘ Real filenames  
-✘ Personal or sensitive information  
-✘ Photos, videos, documents, directory listings
+✘ Personally identifiable directory names  
+✘ User photos, videos, or documents  
+✘ Screenshots exposing private folder names or file previews  
+
+✔ Only anonymized / cropped / non-sensitive evidence may be shown  
+(to demonstrate authenticity without breaching privacy)
 
 ## Workflow Philosophy
 1️⃣ Image first — never touch the original  
+   (*Exception: if drive is mechanically healthy and only logically corrupted, 
+   a non-destructive scan with TestDisk / DMDE may be run to evaluate recoverability before imaging. 
+   No write operations without a backup or client consent.*) 
+   
 2️⃣ Preserve — never modify evidence  
 3️⃣ Recover only after imaging  
 4️⃣ Stop early if risk > value  

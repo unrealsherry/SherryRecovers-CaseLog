@@ -38,6 +38,10 @@ This repo is a long-term record to:
 • Demonstrate forensic-grade authenticity  
 • Become accountable to the craft, not outcomes
 
+## All cases are documented with client consent.  
+## No client-identifiable content is uploaded.  
+## Images are cropped to avoid revealing personal folder names or files.
+
 ---
 
 > Early-stage practice. Expect imperfection — and progress.

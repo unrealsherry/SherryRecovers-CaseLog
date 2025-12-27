@@ -10,7 +10,7 @@ YYYY-NN (increment each case)
 **Model:**  
 **Capacity:**  
 **Interface (USB/SATA/NVMe):**  
-**Serial (first 4 chars only):**  
+**Serial (first 4 chars only):**  (optional – record only if accessible / photographed)
 
 ---
 

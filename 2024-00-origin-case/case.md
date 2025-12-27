@@ -1,92 +1,107 @@
-# Case Report – Hitachi 1TB HDD (Physical Degradation – 0% Health)
+# 🧾 DATA RECOVERY CASE RECORD
+(Internal documentation — not client-facing)
 
-**Client:** Client – anonymized  
-**Case ID:** 2024-00  
-**Drive Model:** Hitachi HUA722010CLA330  
+# Case ID
+2024-00
+
+---
+
+## 🧩 Media
+**Model:** Hitachi HUA722010CLA330  
 **Capacity:** 1TB  
-**Interface:** SATA  
+**Interface:** SATA (removed from external enclosure)  
 **Serial (first 4 chars only):** HZ0J  
 **Production Date:** Dec-2010  
-**Failure Category:** Physical degradation – unstable media (0% health)  
-**Outcome:** Partial file recovery + Full raw disk image delivered  
+
+---
+
+## 🧭 Case Type
+- Physical degradation / slow reads
+
+---
+
+## 🩺 Symptoms Observed
+• Windows attempted auto-repair on boot  
+• Only 2 visible partitions, 1 corrupted / inaccessible  
+• Severe slow reads + freezes  
+• SMART showed imminent failure (0% health)  
+
+---
+
+## 🧬 Failure Signature (What actually broke)
+Physical HDD wear — unstable read band and reallocated sectors (0% health). 
+Logical metadata collapse present on 2 partitions prior to acquisition (tree loss pre-existing).
+
+---
+
+## 🛠 Acquisition / Imaging
+**Applicable (unstable physical media – imaging mandatory)**  
+- ddrescue mapfile: *present (local – not uploaded)*  
+- Commands used:
+  ```
+  ddrescue -f -n /dev/sdX image.img map.log
+  ddrescue -f -r1 /dev/sdX image.img map.log
+  ```
+Environment: SystemRescueCD live OS  
+Imaging required multiple days due to retry cycles + fallback mode.
+
+---
+
+## 📂 Evidence Collected
+| Artifact | Included |
+|---------|----------|
+| device-info.txt | ✘ |
+| smartctl.txt | ✘ (SMART screenshot only) |
+| hdparm.txt | ✘ |
+| lsblk.txt | ✘ |
+| fdisk.txt | ✘ |
+| cropped screenshots (UI-only) | ✔ |
+
+*(Actual recovered client files are **never** stored)*
+
+---
+
+## 🧰 Recovery Actions
+• Imaging performed before filesystem access  
+• Image loaded into DMDE for metadata-based recovery  
+• Signature scan → partial NTFS reconstruction  
+• Extraction of remaining readable files  
+
+---
+
+## 📦 Output / Result
+**Percent recovered:** Not numerically quantified — full disk image acquired; logical file availability varies by partition state  
+**Hierarchy preserved:** partial — one partition intact, two arrived already metadata-collapsed  
+**Carving required:** yes — limited to collapsed partitions  
+**Client goals met:** partial — target files exist inside image, but structured hierarchy cannot be rebuilt
+
+---
+
+## ⏱ Time Breakdown
+| Stage | Duration |
+|--------|----------|
+| Imaging (ddrescue) | ~4–6 days (intermittent retries) |
+| Analysis / DMDE scan | ~2–3 hours |
+| Extraction | ~1–2 hours |
+
 **Total Analyst Time (active):** ~4–6 hours  
-**Calendar Duration:** ~4–6 days (imaging required slow retries)
-
-
-## 🧩 Incident Summary
-A client-owned external HDD (1TB Hitachi, manufactured Dec-2010) was delivered after becoming unreadable inside Windows.  
-Windows attempted **automatic repairing at boot**, but failed; file explorer only displayed **2 readable partitions** and **1 corrupted/mangled partition** inaccessible to the user.
-
-The drive exhibited extreme read-instability. SMART flags indicated imminent failure; **imaging was prioritized** instead of filesystem repair to avoid further degradation.
+**Calendar Duration:** ~4–6 days  
 
 ---
 
-## 🛠 Actions Taken
-
-### 1️⃣ Initial Assessment
-| Task | Result |
-|------|--------|
-| Non-invasive physical check | Drive body and SATA connector inspected externally. No opening of the drive or PCB removal was performed. |
-| SMART / HDSentinel | **0% Health** – reallocated and bad sectors present |
-| lsblk / disk list check | Confirmed 3 partitions, 1 corrupted |
-| Decision | Proceed with **full bit-level image** before touching disk |
+## 🔒 Privacy Notes
+• No names or identifiable content published  
+• Only cropped tool screenshots included  
+• Raw disk image **not** kept — delivered to client  
 
 ---
 
-### 2️⃣ Imaging Procedure
-Performed full-disk image of the failing drive using a rescue-safe environment (**SystemRescueCD live env**).  
-Imaging required **multiple days** due to:
-- read freezes
-- unstable sectors
-- retries + fallback read mode
-
-Final image size: **~1 TB (raw .img)**  
-Image handed to client for future preservation + optional lab-grade recovery if desired.
+## 🧭 Reflection / Lessons
+• Imaging-first saved remaining data — touching live disk would've worsened damage  
+• 0%-health drives require patience; time cost is exponential  
+• Should obtain SMART & disk metadata artifacts for all future physical cases
 
 ---
 
-### 3️⃣ Data Recovery Attempts (Soft-Layer)
-Using **DMDE**, the following recovery paths were attempted on the image:
-- Metadata-based scan
-- File signature scan
-- Partial NTFS reconstruction
-
-Recovered identifiable material included:
-- Thousands of graphics/images (JPG, PSD, PNG…)
-- Text & document files
-- Some executables and application folders
-- Misc. small files
-
-⚠️ Folder-level naming structure was heavily inconsistent due to metadata collapse.  
-A **partial extraction** (not structured) was possible, however most of the *clean full-directory tree* could not be restored.
-
----
-
-## 📦 Final Client Deliverables
-- ✔ Full 1TB Raw Disk Image (`*.img`)
-- ✔ Screenshots documenting DMDE scans
-- ❌ Full clean directory-level restoration (not possible due to metadata loss)
-
-Client retained **all rights** to request future advanced lab-grade service if deeper reconstruction is desired.
-
----
-
-## 🔒 Notes on Privacy & Evidence
-- No personally identifiable directory names or file previews are published
-- Images included in repository are **cropped** to general UI-only screenshots
-- Raw client data is **never stored** in repo (only documentation + neutral evidence)
-
----
-
-## 🧾 Lessons Learned / Takeaways
-| Observation | Lesson |
-|-------------|--------|
-| Imaging before touching filesystem | Saves data when drive is dying |
-| 0%-health drives behave unpredictably | Time investment can multiply ×10 |
-
----
-
-> _This case was taken as an early-stage learning opportunity. I accepted a small compensation to cover time and machine occupation._
-  
----
-
+## ✔ Next Time I Will
+Capture full evidence set (SMART + lsblk + fdisk + device-info) before imaging to improve future case comparability.

@@ -1,12 +1,18 @@
-# Case Report – Transcend External HDD (Virus – Hidden Data)
+# Case Report – Transcend External HDD (Logical Damage – Virus Hidden Data)
 
 **Client:** Personal – anonymized  
-**Drive:** Transcend StoreJet , 1TB  
-**Interface:** USB 3.0  
-**Failure Category:** Logical damage – malware–induced folder concealment  
-**Outcome:** 100% Successful Recovery (Hierarchy rebuilt manually)  
-**Total Analyst Time:** ~12–14 hours
+**Case ID:** 2024-01  
 
+**Drive Model:** Transcend StoreJet  
+**Capacity:** 1TB  
+**Interface:** USB 3.0  
+**Serial (first 4 chars only):** Not exposed over USB (external enclosure – S/N unavailable)  
+
+**Failure Category:** Logical damage – malware-induced folder concealment  
+**Outcome:** 100% successful recovery (hierarchy rebuilt manually)  
+
+**Total Analyst Time (active):** ~12–14 hours  
+**Calendar Duration:** ~4–5 days (intermittent due to manual rebuild)
 
 ---
 

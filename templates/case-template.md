@@ -1,48 +1,130 @@
+# 🧾 DATA RECOVERY CASE RECORD
+(Internal documentation – not client-facing)
+
 # Case ID
 YYYY-NN (increment each case)
 
-# Media
-Model:
-Capacity:
-Interface (USB/SATA/NVMe):
-Serial (first 4 chars only):
+---
 
-# Symptoms Observed
-• Slow reads / clicking / SMART warnings / disappears / etc
+## 🧩 Media
+**Model:**  
+**Capacity:**  
+**Interface (USB/SATA/NVMe):**  
+**Serial (first 4 chars only):**  
 
-# Failure Signature
-(e.g., bad band at 1.2TB mark, metadata collapse, missing MFT, broken partition)
+---
 
-# Acquisition Log
-Raw ddrescue mapfile: `ddrescue.log`
+## 🧭 Case Type
+(choose one)
+- Physical degradation / slow reads
+- Logical damage (malware / deleted / formatted)
+- Filesystem corruption
+- Partition loss
+- Mixed / unknown
 
-Commands used:
+---
+
+## 🩺 Symptoms Observed
+• Slow reads / freezing / disappears / clicking  
+• Mounts but shows empty folders  
+• RAW volume  
+• Missing partitions  
+• etc.
+
+(Add only relevant bullets)
+
+---
+
+## 🧬 Failure Signature (What actually broke)
+Examples:
+• bad band at 1.2TB  
+• metadata collapse – missing MFT  
+• fake folders + hidden attributes (virus)  
+• overwritten partition table  
+• USB bridge failure  
+• etc.
+
+(Be specific and honest — 1–2 lines)
+
+---
+
+## 🛠 Acquisition / Imaging (skip if not applicable)
+
+**If applicable (physical risk / unstable media):**
+- ddrescue mapfile: `ddrescue.log`
+- Commands used:
 ```
 ddrescue -f -n /dev/sdX image.img map.log
 ddrescue -f -r1 /dev/sdX image.img map.log
 ```
 
-# Disk Evidence
-• device-info.txt  
-• smartctl.txt  
-• hdparm.txt  
-• lsblk.txt  
-• fdisk.txt  
+**If not applicable (logical-only / safe live disk):**
+- N/A – logical-only case (no imaging performed)
 
-# Result
-Percent recovered:
+Goal: always image first unless 100% confirmed logical-only and low risk.
 
-Hierarchy preserved: yes/no/partial
 
-Carving required: yes/no
+---
 
-# Time Required
-Imaging:
+## 📂 Evidence Collected
+(only generic / non-sensitive artifacts should be saved)
 
-Analysis:
+| Artifact | Included |
+|---------|----------|
+| device-info.txt | ✔/✘ |
+| smartctl.txt | ✔/✘ |
+| hdparm.txt | ✔/✘ |
+| lsblk.txt | ✔/✘ |
+| fdisk.txt | ✔/✘ |
+| cropped screenshots | ✔/✘ |
 
-# Notes
-• Short bullet points only
+*(Actual recovered files are **never** stored)*
 
-# What I'll do earlier next time
-(short sentence)
+---
+
+## 🧰 Recovery Actions
+• Tools used  
+• Order of operations  
+• Imaging first? or live-disk work?  
+• Carving vs metadata recovery  
+(Write in short bullet points)
+
+---
+
+## 📦 Output / Result
+**Percent recovered:**  
+**Hierarchy preserved:** yes / partial / no  
+**Carving required:** yes / no  
+**Client goals met:** yes / partial / no  
+
+---
+
+## ⏱ Time Breakdown
+| Stage | Duration |
+|--------|----------|
+| Imaging (ddrescue) | |
+| Malware scan / analysis | |
+| Manual extraction / recovery | |
+| Hierarchy rebuild | |
+| Final transfer & packaging | |
+
+**Total Analyst Time (active):**  
+**Calendar Duration:**  
+
+---
+
+## 🔒 Privacy Notes
+(No client names, folder names, or file previews are stored or shown.)
+
+---
+
+## 🧭 Reflection / Lessons
+(short bullet list – what changed in your thinking)
+
+---
+
+## ✔ Next Time I Will
+(one sentence improvement commitment)
+
+(End of Case Record – do not attach recovered client content)
+

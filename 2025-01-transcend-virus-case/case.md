@@ -5,7 +5,7 @@
 **Interface:** USB 3.0  
 **Failure Category:** Logical damage – malware–induced folder concealment  
 **Outcome:** 100% Successful Recovery (Hierarchy rebuilt manually)  
-**Total Analyst Time:** ~10–12 hours
+**Total Analyst Time:** ~12–14 hours
 
 
 ---
@@ -44,6 +44,7 @@ DMDE identified:
 📌 Because DMDE Free cannot mass-extract folders, extraction was performed **manually** — directory-by-directory, rebuilding original paths.
 
 Result:
+
 ✔ All hidden folders recovered  
 ✔ File hierarchy reconstructed by hand  
 ✔ 1:1 original structure re-created  
@@ -62,27 +63,32 @@ All temporary data storage was short-term, controlled, and destroyed immediately
 
 ---
 
-## 📦 Final Deliverables
-- ✔ Fully rebuilt directory structure
-- ✔ 100% of hidden data restored
-- ✔ External drive returned to clean usable state
-- ✔ Malware removed
-
----
-
 ## ⏱ Time Breakdown
 | Stage | Duration |
 |--------|----------|
 | Imaging (ddrescue) | N/A – logical case (no physical risk) |
 | Malware scan & assessment | ~1 hour |
-| Manual extraction & hierarchy rebuild | ~14–20 hours |
-| Formatting & final data transfer | ~3-4 hour |
+| Manual extraction & hierarchy rebuild | ~10–12 hours |
+| Formatting & final data transfer | ~1–2 hours |
+
+**Total Analyst Time (active):** ~12–14 hours  
+**Calendar Duration:** ~4–5 days (intermittent work & availability gaps)
+
 
 ---
+
+## 📦 Final Deliverables
+- ✔ Malware removed
+- ✔ 100% of hidden data restored
+- ✔ Fully rebuilt directory structure
+- ✔ External drive returned to clean usable state
+
 
 (No recovered content or file previews are kept or uploaded.)
 
 ---
+
+
 
 ## 🧭 Reflection / Lessons (for skill-growth tracking)
 | Observation | Learning |

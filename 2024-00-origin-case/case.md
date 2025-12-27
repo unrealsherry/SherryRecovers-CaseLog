@@ -1,12 +1,17 @@
-# Case Report – Hitachi 1TB HDD (Prod. Dec 2010)
+# Case Report – Hitachi 1TB HDD (Physical Degradation – 0% Health)
 
-**Client:** (Personal friend – anonymized)  
-**Drive:** Hitachi – 1.0TB – Production Date: Dec 2010  
-**Failure Status:** Severe degradation – Health Reported: **0% (Hard Disk Sentinel)**  
-**Outcome:** **Partial File Recovery** + Full Raw Disk Image Delivered  
-**Total Time Spent:** ~4–6 days (Imaging + Recovery Attempts)
+**Client:** Client – anonymized  
+**Case ID:** 2024-00  
+**Drive Model:** Hitachi HUA722010CLA330  
+**Capacity:** 1TB  
+**Interface:** SATA  
+**Serial (first 4 chars only):** HZ0J  
+**Production Date:** Dec-2010  
+**Failure Category:** Physical degradation – unstable media (0% health)  
+**Outcome:** Partial file recovery + Full raw disk image delivered  
+**Total Analyst Time (active):** ~4–6 hours  
+**Calendar Duration:** ~4–6 days (imaging required slow retries)
 
----
 
 ## 🧩 Incident Summary
 A client-owned external HDD (1TB Hitachi, manufactured Dec-2010) was delivered after becoming unreadable inside Windows.  

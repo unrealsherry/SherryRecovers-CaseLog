@@ -1,4 +1,4 @@
-# Case Report – Transcend External HDD (Logical Damage – Virus Hidden Data)
+# Case Report – Transcend StoreJet 1TB (Logical Damage – Malware Hidden-Data Case)
 
 # 🧾 DATA RECOVERY CASE RECORD
 (Internal documentation — not client-facing)

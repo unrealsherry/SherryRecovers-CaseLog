@@ -1,8 +1,8 @@
 # 🧾 DATA RECOVERY CASE RECORD
-(Internal documentation – not client-facing)
+(Technical documentation — sanitized for public portfolio)
 
 # Case ID
-YYYY-NN (increment each case)
+YYYY-NN  <!-- increment each case -->
 
 ---
 
@@ -10,7 +10,7 @@ YYYY-NN (increment each case)
 **Model:**  
 **Capacity:**  
 **Interface (USB/SATA/NVMe):**  
-**Serial (first 4 chars only):**  (optional – record only if accessible / photographed)
+**Serial (first 4 chars only):** *(optional – record only if accessible or photographed)*  
 
 ---
 
@@ -26,33 +26,32 @@ YYYY-NN (increment each case)
 
 ## 🩺 Symptoms Observed
 • Slow reads / freezing / disappears / clicking  
-• Mounts but shows empty folders  
+• Mounts but shows empty / decoy folders  
 • RAW volume  
 • Missing partitions  
 • etc.
 
-(Add only relevant bullets)
+(Add only bullets that apply)
 
 ---
 
 ## 🧬 Failure Signature (What actually broke)
+(Be specific — 1–2 lines)
+
 Examples:
-• bad band at 1.2TB  
+• bad band at 1.2TB – unreadable sectors  
 • metadata collapse – missing MFT  
 • fake folders + hidden attributes (virus)  
-• overwritten partition table  
+• overwritten GPT / partition table  
 • USB bridge failure  
-• etc.
-
-(Be specific and honest — 1–2 lines)
 
 ---
 
 ## 🛠 Acquisition / Imaging (skip if not applicable)
 
 **If applicable (physical risk / unstable media):**
-- ddrescue mapfile: `ddrescue.log`
-- Commands used:
+- ddrescue map: `ddrescue.log`
+- Commands:
 ```
 ddrescue -f -n /dev/sdX image.img map.log
 ddrescue -f -r1 /dev/sdX image.img map.log
@@ -62,7 +61,6 @@ ddrescue -f -r1 /dev/sdX image.img map.log
 - N/A – logical-only case (no imaging performed)
 
 Goal: always image first unless 100% confirmed logical-only and low risk.
-
 
 ---
 
@@ -79,6 +77,18 @@ Goal: always image first unless 100% confirmed logical-only and low risk.
 | cropped screenshots | ✔/✘ |
 
 *(Actual recovered files are **never** stored)*
+
+---
+
+## 🗂 Evidence Summary
+All evidence stored under:  
+`/cases/YYYY-NN-<case-name>/evidence/`
+
+Example contents:
+- DMDE scan screenshots
+- Partition maps
+- SMART UI screenshot
+- ddrescue log file (if applicable)
 
 ---
 

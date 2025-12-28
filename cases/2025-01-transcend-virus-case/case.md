@@ -1,7 +1,7 @@
 # Case Report – Transcend StoreJet 1TB (Logical Damage – Malware Hidden-Data Case)
 
 # 🧾 DATA RECOVERY CASE RECORD
-(Internal documentation — not client-facing)
+(Technical documentation — privacy-safe and suitable for public archive)
 
 # Case ID
 2024-01

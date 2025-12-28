@@ -54,7 +54,7 @@ Imaging required multiple days due to retry cycles + fallback mode.
 | Artifact | Included |
 |---------|----------|
 | device-info.txt | ✘ |
-| smartctl.txt | ✘ (SMART screenshot only) |
+| smartctl.txt | ✘ |
 | hdparm.txt | ✘ |
 | lsblk.txt | ✘ |
 | fdisk.txt | ✘ |
@@ -65,6 +65,8 @@ Imaging required multiple days due to retry cycles + fallback mode.
 ## 🗂 Evidence Summary
 All evidence stored under:  
 `/2025-00-origin-hitachi-physical-degradation-case/evidence/`
+ SMART 0% health status was observed live but not captured — missing documentation noted.
+
 
 ### Evidence Included
 The following **neutral, non-sensitive** artifacts were captured:

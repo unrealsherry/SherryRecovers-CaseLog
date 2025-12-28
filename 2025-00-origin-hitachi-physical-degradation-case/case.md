@@ -1,3 +1,6 @@
+# Case Report – Hitachi Physical Degradation Case
+
+
 # 🧾 DATA RECOVERY CASE RECORD
 (Internal documentation — not client-facing)
 

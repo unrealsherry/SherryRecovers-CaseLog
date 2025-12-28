@@ -2,7 +2,7 @@
 
 
 # 🧾 DATA RECOVERY CASE RECORD
-(Internal documentation — not client-facing)
+(Technical documentation — sanitized for public portfolio)
 
 # Case ID
 2024-00
@@ -61,6 +61,21 @@ Imaging required multiple days due to retry cycles + fallback mode.
 | cropped screenshots (UI-only) | ✔ |
 
 *(Actual recovered client files are **never** stored)*
+
+## 🗂 Evidence Summary
+All evidence stored under:  
+`/2025-00-origin-hitachi-physical-degradation-case/evidence/`
+
+### Evidence Included
+The following **neutral, non-sensitive** artifacts were captured:
+
+- `windows-autorepair-boot.jpeg` — Screenshot showing Windows automatic repair attempt
+- `windows-explorer-3partitions.jpeg` — Screenshot showing visible/hidden partitions
+- `dmde-01-root-view.jpeg` — DMDE root scan result (corrupted partitions visible)
+- `dmde-02-tree-view.jpeg` — DMDE directory tree view
+- `sysresccd-01.jpeg` — SystemRescue environment booted
+- `sysresccd-02.jpeg` — Imaging environment confirmation  
+- `.gitkeep` — placeholder file to retain directory in Git
 
 ---
 

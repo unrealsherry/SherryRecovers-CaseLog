@@ -1,4 +1,4 @@
-# Case Report – Hitachi Physical Degradation Case
+# Case Report – Hitachi 1TB HDD (Physical Degradation – 0% Health)
 
 
 # 🧾 DATA RECOVERY CASE RECORD

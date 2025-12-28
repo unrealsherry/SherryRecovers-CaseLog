@@ -1,5 +1,5 @@
 # 🧾 DATA RECOVERY CASE RECORD
-(Technical documentation — sanitized for public portfolio)
+(Technical documentation — privacy-safe and suitable for public archive)
 
 # Case ID
 YYYY-NN  <!-- increment each case -->

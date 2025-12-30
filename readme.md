@@ -33,6 +33,7 @@ All work follows a read-only, imaging-first workflow. No client data is ever upl
 
 ## Why This Exists
 This repo is a long-term record to:
+
 • Track experience  
 • Build professional identity  
 • Demonstrate forensic-grade authenticity  
